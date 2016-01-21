@@ -16,9 +16,16 @@ body {
 {
     background-color: #1A1C22;
     border: none;
+    color:black;
 }
 
-.navbar > li > a
+.navbar-nav>li>a
 {
     line-height: 21px;
+    color: #CFD2DA !important;
+}
+.navbar-nav>li>a:hover
+{
+    line-height: 21px;
+    color:white !important;
 }
