@@ -5,8 +5,10 @@
       'ngResource',
       'ngRoute',
       'ngMessages',
+      'utils.network',
       'smart-table',
       'ui.bootstrap',
+      'lol',
       'frapontillo.bootstrap-switch',
       'ngSanitize'
     ]);
@@ -24,10 +26,20 @@
         return $location.path().indexOf(route) === 0;
       }
     }
-
      angular
          .module('app')
          .controller('navbar', navbar);
+
+     angular
+         .module('app')
+         .controller('home', home);
+
+
+    function home($scope, $location, network)
+    {
+      
+    }
+
 
     navbar.$inject = ['$scope','$location'];
     /*
@@ -43,9 +55,9 @@
              {
                 templateUrl: function (params)
                             {
-                              return 'index.html';
+                              return 'welcome.html';
                             },
-                controller:  'Home',
+                controller:  'home',
                 controllerAs :'mv'
              }).
         otherwise({redirectTo:  '/home/'});
