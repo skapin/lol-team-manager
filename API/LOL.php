@@ -1,7 +1,5 @@
 <?php
-
-require_once("config.php");
-require_once("API.php");
+require_once ('include.php');
 
 
 class LOL

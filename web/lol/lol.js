@@ -12,6 +12,7 @@
     function lol($injector, $timeout, $interval)
     {
       var enableNotify = true;
+      
         var factory =
         {
             getTeamByUser : getTeamByUser,
