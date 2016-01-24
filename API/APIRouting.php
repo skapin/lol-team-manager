@@ -30,7 +30,3 @@ else if ( $_GET['ACTION'] == 'get_user_role' )
 
 
 }
-
-
-
-?>
