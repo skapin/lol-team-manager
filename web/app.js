@@ -9,6 +9,8 @@
       'smart-table',
       'ui.bootstrap',
       'lol',
+      'app.authentificator',
+      'app.home',
       'frapontillo.bootstrap-switch',
       'ngSanitize'
     ]);
@@ -30,16 +32,6 @@
          .module('app')
          .controller('navbar', navbar);
 
-     angular
-         .module('app')
-         .controller('home', home);
-
-
-    function home($scope, $location, network)
-    {
-      
-    }
-
 
     navbar.$inject = ['$scope','$location'];
     /*
@@ -58,6 +50,15 @@
                               return 'welcome.html';
                             },
                 controller:  'home',
+                controllerAs :'mv'
+             }).
+        when('/register/',
+             {
+                templateUrl: function (params)
+                            {
+                              return 'authentificator/register.html';
+                            },
+                controller:  'Register',
                 controllerAs :'mv'
              }).
         otherwise({redirectTo:  '/home/'});

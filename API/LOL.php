@@ -45,6 +45,12 @@ class LOL
 	{
 		return '?api_key='.$this->getAPIKey();
 	}
+	function getSummonerInfo($pseudo)
+	{
+		$ret = CallAPI('GET', $this->base_url.'/api/lol/'.$this->region.'/v1.4/summoner/by-name/'.$pseudo.$this->apiKeyAsParam() );
+
+		return $ret;
+	}
 
 }
 

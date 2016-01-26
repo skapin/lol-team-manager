@@ -29,3 +29,8 @@ body {
     line-height: 21px;
     color:white !important;
 }
+
+.main
+{
+  padding-top: 100px;
+}

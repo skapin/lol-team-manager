@@ -30,3 +30,10 @@ else if ( $_GET['ACTION'] == 'get_user_role' )
 
 
 }
+
+else if ( $_GET['ACTION'] == 'get_lol_user_info' && isset($_GET['pseudo']) )
+{
+    $l = new Lol();
+    print($l->getSummonerInfo( getPost($_GET['pseudo']), true) );
+
+}

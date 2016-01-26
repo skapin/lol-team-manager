@@ -1,0 +1,104 @@
+
+
+
+.StAx_java_motClef,.StAx_java_motClef-new{
+	font-weight:bold;
+	color:purple;
+}
+.StAx_java_type-entier{
+	font-weight:bold;
+	color:#00108A;
+}
+
+.StAx_java_ligneCommentaire{
+	color:#FF8000;
+	font-style:italic;
+}
+
+.StAx_java_zoneCommentaire{
+	color:#FF8000;
+	font-style:italic;
+}
+
+.StAx_java_javadoc{
+	color:#00C0C0;
+	font-style:italic;
+}
+
+.StAx_java_type{
+	color:green;
+	font-weight:bold;
+}
+
+
+
+.StAx_java_class{
+	color:green;
+	
+}
+
+
+.StAx_java_using{
+	color:#008000;
+	font-weight:bold;
+}
+
+.StAx_java_string{
+	color:red;
+}
+
+
+/*********PHP***********/
+
+
+
+.StAx_php_motClef{
+	font-weight:bold;
+	color:purple;
+}
+.StAx_php_variable{
+	font-weight:bold;
+	color:red;
+}
+
+.StAx_php_PHP{
+	font-weight:bold;
+	color:red;
+}
+
+.StAx_php_ligneCommentaire{
+	color:#FF8000;
+	font-style:italic;
+}
+
+.StAx_php_zoneCommentaire{
+	color:#FF8000;
+	font-style:italic;
+}
+
+.StAx_php_type{
+	color:black;
+	font-weight:bold;
+}
+.StAx_php_accoladeCrochet{
+	color:black;
+}
+.StAx_php_string, .StAx_php_stringQuote, .StAx_php_stringQuote .StAx_php_variable, .StAx_php_string .StAx_php_variable{
+	color:green;
+}
+
+.StAx-pre-php{
+	color:blue;
+	overflow:auto;
+}
+.StAx-renderLayout_sober1{
+	margin:5px;
+	padding:5px;
+	padding-left:10px;
+	border:dashed 1px black;
+	background-color:#E1E1E1;
+}
+
+.StAx-renderLayout_littleScrollArea{
+	height:300px;
+}
