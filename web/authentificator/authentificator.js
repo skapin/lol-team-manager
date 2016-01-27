@@ -47,6 +47,7 @@
       var params  = { 'ACTION': 'get_lol_user_info',
                       'pseudo': mv.summoner_name };
       var summoner_name = mv.summoner_name;
+      mv.searching_summoner_name = true;
       var results = network.get(params, '/lol/API/APIRouting.php').then(
           function ( summoner_data )
           {
@@ -55,6 +56,10 @@
               mv.summoner                = summoner_data[summoner_name];
               mv.searching_summoner_name = false;
               mv.datas_checked           = true;
+            }
+            else
+            {
+              mv.searching_summoner_name = false;
             }
           });
     };

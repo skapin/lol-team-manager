@@ -43,13 +43,13 @@
           </ul>
             <!-- if logged -->
             <div ng-show="mv.is_logged">
-              <form class="navbar-form navbar-right" role="form" action="#" method="post">
+              <div class="navbar-form navbar-right">
               <label id="pseudoLabel" >{{mv.pseudo}}</label>
               <button type="submit" ng-click="mv.signout()" class="btn btn-sm btn-danger" name="sign-out">Sign Out <span class="glyphicon glyphicon-log-out"></span></button>
-              </form>
+              </div>
             </div>
             <div ng-hide="mv.is_logged">
-              <form class="navbar-form navbar-right" role="form" action="compte.php" method="post">
+              <div class="navbar-form navbar-right">
                 <div class="form-group">
                   <input type="text" placeholder="Pseudo" class="form-control" id="pseudo" name="pseudo">
                 </div>
@@ -57,10 +57,7 @@
                   <input type="password" placeholder="Password" class="form-control" name="password" id="password" >
                 </div>
                 <button type="submit" ng-click="mv.signin()" class="btn btn-sm btn-success" name="sign-in" >Sign in <span class="glyphicon glyphicon-log-in"></span></button>
-              </form>
-              <form class="navbar-form navbar-right" role="form" action="register.php">
                 <a href="#/register/"><button type="submit" class="btn btn-sm btn-info" >Register</button></a>
-              </form>
             </div>
         </div><!--/.nav-collapse -->
       </div>
