@@ -53,9 +53,3 @@ class LOL
 	}
 
 }
-
-$l = new Lol();
-print($l->getUserByName('skapin'));
-print($l->getDDragonVersion());
-
-?>

@@ -210,9 +210,7 @@
                    .success(
                      function (data)
                      {
-                       deferred.resolve({
-                         results: data
-                       });
+                       deferred.resolve(data);
                      })
                    .error(
                      function (data, xstatus)

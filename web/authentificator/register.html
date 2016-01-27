@@ -10,7 +10,7 @@
                             ng-minlength="3"
                             ng-maxlength="32"
                             ng-pattern="/[\w-\.]+/"
-                            ng-model="mv.summoner"
+                            ng-model="mv.summoner_name"
                             ng-required="true">
                 </div>
                 <div class="form-group">
@@ -22,25 +22,36 @@
                             ng-model="mv.password"
                             ng-required="true">
                 </div>
-                <div class="form-group has-warning has-feedback" id="formPassConf">
-                    <label class="control-label" for="passconf" id="labelPassConf">Enter Password</label>
+                <div class="form-group has-feedback" ng-class="mv.confirm.has_feedback" id="formPassConf">
+                    <label class="control-label" for="passconf" id="labelPassConf">{{mv.confirm.hint}}</label>
                     <div class="input-group">
                         <span class="input-group-addon">Confirmation</span>
                         <input  id="passconf"
                                 name="password_confirmation"
                                 class="form-control"
                                 type="password"
+                                ng-model="mv.password_confirmation"
                                 ng-required="true">
                     </div>
-                    <span class="glyphicon glyphicon-warning-sign form-control-feedback" id="glyphPassConf"></span>
+                    <span class="glyphicon form-control-feedback" ng-class="mv.confirm.glyph" id="glyphPassConf"></span>
                 </div>
                 <br>
             <div class="form-group text-center">
+                <div ng-show="mv.datas_checked" class="label label-info">Name:{{mv.summoner.name}}<br>Level: {{mv.summoner.summonerLevel}}</div>
+            </div>
+            <div class="form-group text-center">
+                <label class="control-label" for="Valider"></label>
+                <button id="checksummoner"
+                        name="checksummoner"
+                        class="btn btn-warning"
+                        ng-click="mv.search_summoner_name()"
+                        ng-hide="form.$invalid || mv.datas_checked || (mv.password_confirmation != mv.password)" >Check Summoner Name
+                        <img ng-show="mv.searching_summoner_name" src="img/ajax-loader.gif" width="15" height="15" /></button>
                 <label class="control-label" for="Valider"></label>
                 <button id="register"
                         name="register"
                         class="btn btn-success"
-                        ng-hide="form.$invalid" >Valider !</button>
+                        ng-hide="form.$invalid|| !mv.datas_checked" >Create your account !</button>
             </div>
             </form>
         </div>
