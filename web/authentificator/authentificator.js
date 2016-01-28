@@ -6,8 +6,9 @@
        .module('app.authentificator')
        .controller('Register', Register);
 
+  Register.$inject = [ '$scope', '$location', 'lol' ];
 
-  function Register($scope, $location, network)
+  function Register($scope, $location, lol)
   {
     var mv                     = this;
     mv.password                = '';
@@ -44,11 +45,10 @@
     };
     mv.search_summoner_name = function()
     {
-      var params  = { 'ACTION': 'get_lol_user_info',
-                      'pseudo': mv.summoner_name };
       var summoner_name = mv.summoner_name;
       mv.searching_summoner_name = true;
-      var results = network.get(params, '/lol/API/APIRouting.php').then(
+
+      lol.getSummonerByName(summoner_name).then(
           function ( summoner_data )
           {
             if ( summoner_data )

@@ -31,7 +31,7 @@ if ( $_GET['ACTION'] == 'get_team_by_user' )
 
 
 }
-else if ( $_GET['ACTION'] == 'get_champ_by_user' )
+else if ( $_GET['ACTION'] == 'get_my_champion_list' )
 {
 
 
