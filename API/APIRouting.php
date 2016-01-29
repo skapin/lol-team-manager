@@ -16,7 +16,6 @@ if ( $_GET['ACTION'] == 'get_lol_user_info' && isset($_GET['pseudo']) )
     print($l->getSummonerInfo($_GET['pseudo'], true) );
     exit;
 }
-
 if ( empty($_GET['USER_ID'])  )
 {
 	echo "No User ID Provided";

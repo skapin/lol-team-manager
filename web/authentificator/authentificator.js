@@ -43,6 +43,16 @@
       }
 
     };
+    mv.create_summoner = function()
+    {
+      var params = {'register':'yes',
+                    'pseudo': mv.summoner_name,
+                    'password': mv.password,
+                    'password_confirmation': mv.password_confirmation};
+      lol.createSummonerAccount(params).then(
+        function()
+        {});
+    };
     mv.search_summoner_name = function()
     {
       var summoner_name = mv.summoner_name;

@@ -21,7 +21,7 @@ function __autoload( $class_name ) {
 
 require("Web/Bdd.php");
 require("Web/basics.php");
-require("Globals/global_sgbd.php");
+require("Globals/global_lol.php");
 
 
 require("config.php");

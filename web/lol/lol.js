@@ -15,7 +15,8 @@
         {
             getTeamByUser : getTeamByUser,
             getSummonerByName: getSummonerByName,
-            getSummonerChampionList: getSummonerChampionList
+            getSummonerChampionList: getSummonerChampionList,
+            createSummonerAccount: createSummonerAccount
 
         };
         return factory;
@@ -25,6 +26,12 @@
         {
           return '1';
         }
+
+        function createSummonerAccount(params)
+        {
+          return network.post(params, '/lol/API/register.php');
+        }
+
         function getSummonerByName(name)
         {
           var params  = { 'ACTION': 'get_lol_user_info',

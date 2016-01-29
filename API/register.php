@@ -1,16 +1,17 @@
 <?php
 require_once ('include.php');
 
-
+print($_SERVER['REQUEST_METHOD']);
+var_dump($_POST);
 /**************   REGISTER     *****************/
 if ( isset($_POST['register']) )
 {
-	$nom = getPost("nom");
-	$prenom = getPost("prenom");
+	print 'aa';
 	$pseudo = getPost("pseudo",true);
-	$mail = getPost("mail",true);
-	$pass = getPost("pass",true);
-	$passconf = getPost("passconf",true);
+	//$mail = getPost("mail",true);
+	$pass = getPost("password",true);
+	$passconf = getPost("password_confirmation",true);
+	$region = 'euw';
 
 	if ( $passconf == $pass )
 	{
@@ -26,8 +27,8 @@ if ( isset($_POST['register']) )
 		}
 		else
 		{
-			$req = "INSERT INTO `MBL_user` (nom, prenom, pseudo, mail, password, sel ) VALUES ( ?,?,?,?,?,? )";
-			$vals = array( post2bdd($nom), post2bdd($prenom), post2bdd($pseudo), post2bdd($mail), post2bdd($pass), $salt );
+			$req = "INSERT INTO `user` (user_name, user_mdpsecret, user_region, sel ) VALUES ( ?,?,?,? )";
+			$vals = array( post2bdd($pseudo),post2bdd($pass), post2bdd($region), $salt );
 			if ( Bdd::sql_insert( $req, $vals ) )
 			{
 				$str .= '<p class="bg-success">Votre compte a été crée avec succés !</p>';
